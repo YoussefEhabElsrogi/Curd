@@ -53,6 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
       </h5>
 
       <?php
+      unset($_SESSION['success']);
       header("Refresh:3;url=index.php");
       exit;
     }
@@ -75,6 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
       <h5 class="alert alert-danger text-center mt-2"><?php echo $error ?>:
         <?php
     }
+    unset($_SESSION['error']);
   }
 } else {
   header("Location: index.php");

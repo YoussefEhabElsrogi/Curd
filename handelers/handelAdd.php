@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
 
     $sql = "INSERT INTO `users`(`user_name`, `user_email`, `user_password`) VALUES ('$name', '$email', '$hashed_password')";
 
-    $resutl = mysqli_query($conn, $sql);
+    $result = mysqli_query($conn, $sql);
 
     if ($result) {
 

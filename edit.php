@@ -1,13 +1,8 @@
 <?php include ('inc/header.php'); ?>
 
+<?php require_once 'checkId.php' ?>
+
 <?php
-
-if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
-
-  header("Location: index.php");
-  exit;
-
-}
 
 $id = $_GET['id'];
 
