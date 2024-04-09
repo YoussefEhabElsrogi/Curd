@@ -65,17 +65,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
 
     ?>
 
-    <a href="javascript:history.go(-1)" class="btn btn-primary">Go Back</a>
 
+    <a href="javascript:history.go(-1)" class="btn btn-primary">Go Back</a>
 
     <?php
 
-    if (isset($_SESSION['error'])) {
-      foreach ($_SESSION['error'] as $error) {
-        ?>
-        <h5 class="alert alert-danger text-center mt-2"><?php echo $error ?>:
-          <?php
-      }
+    foreach ($_SESSION['error'] as $error) {
+      ?>
+      <h5 class="alert alert-danger text-center mt-2"><?php echo $error ?>:
+        <?php
     }
   }
 } else {
