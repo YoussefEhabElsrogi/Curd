@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
 
     $$key = receiveInput($value);
 
-  }
+  }       
 
   if (requireInput($name)) {
     $errors[] = 'Name is required';
