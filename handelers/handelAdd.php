@@ -13,14 +13,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
 
     $$key = receiveInput($value);
 
-  }       
+  }
 
   if (requireInput($name)) {
     $errors[] = 'Name is required';
   } elseif (minInput($name, 3)) {
-    $errors[] = 'Name must be greater thane 3';
+    $errors[] = 'Name must be greater than 3 chars';
   } elseif (maxInput($name, 15)) {
-    $errors[] = 'Name must be smaller than 15';
+    $errors[] = 'Name must be smaller than 15 chars';
   }
 
   if (requireInput($email)) {
@@ -32,9 +32,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
   if (requireInput($password)) {
     $errors[] = 'Password is required';
   } elseif (minInput($password, 8)) {
-    $errors[] = 'Password must be greater than 8';
+    $errors[] = 'Password must be greater than 8 chars';
   } elseif (maxInput($password, 20)) {
-    $errors[] = 'Password must be smaller than 20';
+    $errors[] = 'Password must be smaller than 20 chars';
   }
 
   if (requireInput($errors)) {
